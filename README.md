@@ -4,7 +4,9 @@ guesstidate
 Python library that guesstimates a date format from examples.  This is an actively
  maintained fork of the original [pydateinfer](https://github.com/nedap/dateinfer)
  library.  It maintains python 2/3 compatibility and
- will be released as pydateinfer.  Pull requests and issues welcome.
+ will be released as guesstidate.  Pull requests and issues welcome.
+
+Current repo: [https://github.com/Fraunhofer-FIT-DSAI-PM/guesstidate](https://github.com/Fraunhofer-FIT-DSAI-PM/guesstidate)
 
 Table of Contents
 -----------------
@@ -23,15 +25,6 @@ However, if the documents follow different schemas or if the contents are noisy 
 This library makes a "best guess" on the proper date parsing string (`datetime.strptime`) based on examples in
 the file.
 
-<a name="installation"></a>Installation
----------------------------------------
-
-````sh
-git clone https://github.com/nedap/dateinfer.git
-cd guesstidate
-pip install .
-````
-
 <a name="usage"></a>Usage
 -------------------------
 
@@ -42,27 +35,5 @@ pip install .
 >> >
 ````
 
-Give `dateinfer.infer` a list of example date strings. `infer` returns a `datetime.strftime`/`strptime`-compliant
+Give `guesstidate.infer` a list of example date strings. `infer` returns a `datetime.strftime`/`strptime`-compliant
 date format string for its "best guess" of a format string that will correctly parse the majority of the examples.
-
-
-<a name="development"></a>Development
----------------------------------------
-
-Use the following to install the package locally for development purposes:
-
-````sh
-# create empty virtual environment
-virtualenv venv --python=python3.7
-source venv/bin/activate
-# install guesstidate in editable mode
-pip install -e .
-# install development dependencies
-pip install -r requirements.txt
-````
-
-You can run unit tests as follows:
-
-```sh
-python -m unittest guesstidate/tests.py
-```
