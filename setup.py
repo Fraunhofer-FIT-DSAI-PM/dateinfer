@@ -1,4 +1,5 @@
 from distutils.core import setup
+import re
 
 
 def get_version(version_file):
