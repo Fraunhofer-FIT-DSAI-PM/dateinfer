@@ -17,7 +17,7 @@ setup(
     packages=['guesstidate'],
     url='https://github.com/nedap/dateinfer',
     license='Apache 2.0',
-    author='Jeffrey Starr',
-    author_email='will@pedalwrencher.com',
+    author='Jeffrey Starr, Fraunhofer FIT',
+    author_email='will@pedalwrencher.com, sebastiaan.van.zelst@fit.fraunhofer.de, alessandro.berti@fit.fraunhofer.de',
     description="Infers date format from examples"
 )
