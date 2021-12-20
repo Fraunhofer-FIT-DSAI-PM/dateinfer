@@ -39,7 +39,10 @@ DATE_ELEMENTS = (AMPM(),
                  Timezone())
 
 F = Filler  # short-hand to clarify rules
+# reported fixes from https://github.com/boba-and-beer/dateinfer
 RULES = [
+    If(Sequence(Year4, Year2),
+       SwapSequence([Year4, Year2], [Year4, MonthNum])),
     If(Sequence(MonthNum, F('/'), r'\d', F('/'), Year4),
        SwapSequence([MonthNum, F('/'), r'\d', F('/'), Year4],
                     [MonthNum, F('/'), DayOfMonth, F('/'), Year4])),
@@ -100,6 +103,17 @@ RULES = [
     If(Sequence(DayOfMonth, '.', MonthNum, '.', DayOfMonth),
        SwapSequence([DayOfMonth, '.', MonthNum, '.', DayOfMonth],
                     [DayOfMonth, KeepOriginal, MonthNum, KeepOriginal, Year2])),
+    If(And(
+        Duplicate(Minute),
+        Contains(Hour24)),
+        SwapDuplicateWhereSequenceNot(Minute, Second, [Minute])),
+    If(And(
+        Duplicate(DayOfMonth),
+        Contains(MonthNum)),
+        Swap(MonthNum, Year2)),
+    If(
+        Duplicate(DayOfMonth),
+        SwapDuplicateWhereSequenceNot(DayOfMonth, MonthNum, [DayOfMonth])),
 ]
 
 
