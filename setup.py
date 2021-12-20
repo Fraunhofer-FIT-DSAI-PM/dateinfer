@@ -1,4 +1,3 @@
-import re
 from distutils.core import setup
 
 
@@ -11,22 +10,13 @@ def get_version(version_file):
     raise RuntimeError("Unable to find version string in %s." % (version_file,))
 
 
-setup(name='guesstidate',
-      version=get_version("guesstidate/__init__.py"),
-      description='Infers date format from examples',
-      long_description="""Uses a series of pattern matching and rewriting rules to compute a "best guess" datetime.strptime format string give a list of example date strings.""",
-      author='Jeffrey Starr',
-      author_email='will@pedalwrencher.com',
-      url='https://github.com/nedap/dateinfer',
-      packages=['guesstidate'],
-      classifiers=[
-          'Development Status :: 4 - Beta',
-          'Intended Audience :: Developers',
-          'License :: OSI Approved :: Apache Software License',
-          'Operating System :: OS Independent',
-          'Programming Language :: Python',
-          'Programming Language :: Python :: 3',
-          'Topic :: Software Development :: Libraries :: Python Modules',
-      ],
-      install_requires=['pytz']
-      )
+setup(
+    name='guesstidate',
+    version=get_version("guesstidate/__init__.py"),
+    packages=['guesstidate'],
+    url='https://github.com/nedap/dateinfer',
+    license='Apache 2.0',
+    author='Jeffrey Starr',
+    author_email='will@pedalwrencher.com',
+    description="Infers date format from examples"
+)
