@@ -4,14 +4,14 @@ import unittest
 from contextlib import contextmanager
 from os.path import dirname, join
 
-import dateinfer.ruleproc as ruleproc
+import guesstidate.ruleproc as ruleproc
 import yaml
-from dateinfer.date_elements import (DayOfMonth, Filler, Hour12, Hour24,
-                                     Minute, MonthNum, MonthTextShort, Second,
-                                     Timezone, WeekdayShort, Year2, Year4)
-from dateinfer.infer import (_mode, _most_restrictive, _percent_match,
-                             _tag_most_likely, _tokenize_by_character_class,
-                             infer)
+from guesstidate.date_elements import (DayOfMonth, Filler, Hour12, Hour24,
+                                       Minute, MonthNum, MonthTextShort, Second,
+                                       Timezone, WeekdayShort, Year2, Year4)
+from guesstidate.infer import (_mode, _most_restrictive, _percent_match,
+                               _tag_most_likely, _tokenize_by_character_class,
+                               infer)
 
 LOCALE_LOCK = threading.Lock()
 

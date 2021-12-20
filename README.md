@@ -28,7 +28,7 @@ the file.
 
 ````sh
 git clone https://github.com/nedap/dateinfer.git
-cd dateinfer
+cd guesstidate
 pip install .
 ````
 
@@ -36,10 +36,10 @@ pip install .
 -------------------------
 
 ````Python
->>> import dateinfer
->>> dateinfer.infer(['Mon Jan 13 09:52:52 MST 2014', 'Tue Jan 21 15:30:00 EST 2014'])
+>> > import guesstidate
+>> > guesstidate.infer(['Mon Jan 13 09:52:52 MST 2014', 'Tue Jan 21 15:30:00 EST 2014'])
 '%a %b %d %H:%M:%S %Z %Y'
->>>
+>> >
 ````
 
 Give `dateinfer.infer` a list of example date strings. `infer` returns a `datetime.strftime`/`strptime`-compliant
@@ -55,7 +55,7 @@ Use the following to install the package locally for development purposes:
 # create empty virtual environment
 virtualenv venv --python=python3.7
 source venv/bin/activate
-# install dateinfer in editable mode
+# install guesstidate in editable mode
 pip install -e .
 # install development dependencies
 pip install -r requirements.txt
@@ -64,5 +64,5 @@ pip install -r requirements.txt
 You can run unit tests as follows:
 
 ```sh
-python -m unittest dateinfer/tests.py
+python -m unittest guesstidate/tests.py
 ```

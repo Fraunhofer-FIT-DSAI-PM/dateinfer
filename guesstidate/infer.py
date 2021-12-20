@@ -1,5 +1,5 @@
 """
-This file contains some modification aimed at fixing bugs and improving the dateinfer library.
+This file contains some modification aimed at fixing bugs and improving the guesstidate library.
 The newlines/modification line are preceded with comments indicating the purpose.
 """
 
@@ -7,14 +7,14 @@ import collections
 import itertools
 import string
 
-from dateinfer.date_elements import (AMPM, DayOfMonth, Filler, Hour12, Hour24,
-                                     Minute, MonthNum, MonthTextLong,
-                                     MonthTextShort, Second, Timezone,
-                                     UTCOffset, WeekdayLong, WeekdayShort,
-                                     Year2, Year4)
-from dateinfer.ruleproc import (And, Contains, Duplicate, If, KeepOriginal,
-                                Sequence, Swap, SwapDuplicateWhereSequenceNot,
-                                SwapSequence)
+from guesstidate.date_elements import (AMPM, DayOfMonth, Filler, Hour12, Hour24,
+                                       Minute, MonthNum, MonthTextLong,
+                                       MonthTextShort, Second, Timezone,
+                                       UTCOffset, WeekdayLong, WeekdayShort,
+                                       Year2, Year4)
+from guesstidate.ruleproc import (And, Contains, Duplicate, If, KeepOriginal,
+                                  Sequence, Swap, SwapDuplicateWhereSequenceNot,
+                                  SwapSequence)
 
 # DATE_ELEMENTS is an ordered sequence of date elements, excluding the filler. It is ordered
 # in descending "restrictivity".

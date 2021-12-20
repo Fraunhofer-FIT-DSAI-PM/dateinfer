@@ -11,14 +11,14 @@ def get_version(version_file):
     raise RuntimeError("Unable to find version string in %s." % (version_file,))
 
 
-setup(name='pydateinfer',
-      version=get_version("dateinfer/__init__.py"),
+setup(name='guesstidate',
+      version=get_version("guesstidate/__init__.py"),
       description='Infers date format from examples',
       long_description="""Uses a series of pattern matching and rewriting rules to compute a "best guess" datetime.strptime format string give a list of example date strings.""",
       author='Jeffrey Starr',
       author_email='will@pedalwrencher.com',
       url='https://github.com/nedap/dateinfer',
-      packages=['dateinfer'],
+      packages=['guesstidate'],
       classifiers=[
           'Development Status :: 4 - Beta',
           'Intended Audience :: Developers',
