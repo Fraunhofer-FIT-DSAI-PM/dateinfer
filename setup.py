@@ -1,5 +1,6 @@
 from distutils.core import setup
 import re
+from os.path import dirname, join
 
 
 def get_version(version_file):
@@ -11,13 +12,19 @@ def get_version(version_file):
     raise RuntimeError("Unable to find version string in %s." % (version_file,))
 
 
+def read_file(filename):
+    with open(join(dirname(__file__), filename)) as f:
+        return f.read()
+
+
 setup(
     name='guesstidate',
     version=get_version("guesstidate/__init__.py"),
     packages=['guesstidate'],
     url='https://github.com/Fraunhofer-FIT-DSAI-PM/guesstidate',
     license='Apache 2.0',
-    author='Jeffrey Starr, Fraunhofer FIT',
-    author_email='will@pedalwrencher.com, sebastiaan.van.zelst@fit.fraunhofer.de, alessandro.berti@fit.fraunhofer.de',
-    description="Infers date format from examples"
+    author='Fraunhofer FIT',
+    author_email='sebastiaan.van.zelst@fit.fraunhofer.de, alessandro.berti@fit.fraunhofer.de',
+    description="Infers date format from examples",
+    longdescription=read_file("README.md")
 )

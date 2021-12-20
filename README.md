@@ -28,12 +28,11 @@ the file.
 <a name="usage"></a>Usage
 -------------------------
 
-````Python
->> > import guesstidate
->> > guesstidate.infer(['Mon Jan 13 09:52:52 MST 2014', 'Tue Jan 21 15:30:00 EST 2014'])
+import guesstidate
+guesstidate.infer(['Mon Jan 13 09:52:52 MST 2014', 'Tue Jan 21 15:30:00 EST 2014'])
 '%a %b %d %H:%M:%S %Z %Y'
->> >
-````
+
+
 
 Give `guesstidate.infer` a list of example date strings. `infer` returns a `datetime.strftime`/`strptime`-compliant
 date format string for its "best guess" of a format string that will correctly parse the majority of the examples.
