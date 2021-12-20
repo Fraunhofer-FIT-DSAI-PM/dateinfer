@@ -1,7 +1,7 @@
-guestidate
+guesstidate
 ===========
 
-Python library that guestimates a date format from examples.  This is an actively
+Python library that guesstimates a date format from examples.  This is an actively
  maintained fork of the original [pydateinfer](https://github.com/nedap/dateinfer)
  library.  It maintains python 2/3 compatibility and
  will be released as pydateinfer.  Pull requests and issues welcome.
