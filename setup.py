@@ -25,6 +25,5 @@ setup(
     license='Apache 2.0',
     author='Fraunhofer FIT',
     author_email='sebastiaan.van.zelst@fit.fraunhofer.de, alessandro.berti@fit.fraunhofer.de',
-    description="Infers date format from examples",
-    longdescription=read_file("README.md")
+    description="Infers date format from examples"
 )
